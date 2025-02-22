@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-100;
+}
+.table-responsive {
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #94a3b8;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #94a3b8;
+}
+
+.custom-table thead {
+  background-color: #e2e8f0;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.custom-table tbody tr:nth-child(odd) {
+  background-color: #f8fafc;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
