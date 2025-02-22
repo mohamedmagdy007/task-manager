@@ -1,50 +1,69 @@
-# React + TypeScript + Vite
+# Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Demo
 
-Currently, two official plugins are available:
+Check out the live deployment: [Task Manager App](https://task-manager-steel-gamma.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## Expanding the ESLint configuration
+This is a task management application built with React, Redux Toolkit, and React Hook Form. It allows users to create, update, delete, and manage tasks efficiently with state management powered by Redux Toolkit. The app also includes form validation using Yup and supports various task states.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **CRUD Operations**: Create, Read, Update, and Delete tasks.
+- **Redux Toolkit**: Efficient state management for handling tasks.
+- **React Hook Form**: Simplifies form handling.
+- **Yup Validation**: Ensures input correctness.
+- **Task State Management**: Change task statuses dynamically.
+- **Kanban Board**: Drag-and-drop task management.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Tech Stack
+
+- **Frontend**: React.js
+- **State Management**: Redux Toolkit
+- **Form Handling**: React Hook Form
+- **Validation**: Yup
+- **Drag And Drop**: dnd-kit
+- **UI Styling**: Tailwind CSS (or any preferred CSS framework)
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mohamedmagdy007/task-manager
+   cd task-manager
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Usage
+
+- Add new tasks using the form.
+- View tasks in a list or board view.
+- Update task details and status.
+- Delete tasks when no longer needed.
+
+## Project Structure
+
 ```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+├── src
+│   ├── assets       # Static assets like images and icons
+│   ├── components   # Reusable UI components
+│   ├── hooks        # Custom hooks
+│   ├── layout       # Layout components
+│   ├── pages        # App pages
+│   ├── routes       # Application routes
+│   ├── store        # Redux store setup
+│   ├── types        # TypeScript types
+│   ├── utils        # Utility functions
+│   ├── App.tsx      # Main application file
+│   ├── main.tsx     # Entry point
+│   ├── index.css    # Global styles
+└── README.md        # Project documentation
 ```
